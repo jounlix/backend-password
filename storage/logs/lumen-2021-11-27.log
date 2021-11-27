@@ -1,0 +1,180 @@
+[2021-11-27 08:37:51] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations and table_type = 'BASE TABLE') at W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php:703)
+[stacktrace]
+#0 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback()
+#1 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(367): Illuminate\\Database\\Connection->run()
+#2 W:\\domains\\localhost\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(44): Illuminate\\Database\\Connection->select()
+#3 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable()
+#4 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\Migrator.php(652): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(106): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#8 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#9 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#10 W:\\domains\\localhost\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 W:\\domains\\localhost\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call()
+#14 W:\\domains\\localhost\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call()
+#15 W:\\domains\\localhost\\vendor\\symfony\\console\\Command\\Command.php(299): Illuminate\\Console\\Command->execute()
+#16 W:\\domains\\localhost\\vendor\\illuminate\\console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#17 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(978): Illuminate\\Console\\Command->run()
+#18 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(295): Symfony\\Component\\Console\\Application->doRunCommand()
+#19 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#20 W:\\domains\\localhost\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#21 W:\\domains\\localhost\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run()
+#22 W:\\domains\\localhost\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle()
+#23 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\Connector.php(70): PDO->__construct()
+#1 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection()
+#2 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection()
+#3 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect()
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(1021): call_user_func()
+#6 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(1057): Illuminate\\Database\\Connection->getPdo()
+#7 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(433): Illuminate\\Database\\Connection->getReadPdo()
+#8 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(359): Illuminate\\Database\\Connection->getPdoForSelect()
+#9 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#10 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback()
+#11 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(367): Illuminate\\Database\\Connection->run()
+#12 W:\\domains\\localhost\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(44): Illuminate\\Database\\Connection->select()
+#13 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable()
+#14 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\Migrator.php(652): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(106): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#19 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 W:\\domains\\localhost\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#22 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#23 W:\\domains\\localhost\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call()
+#24 W:\\domains\\localhost\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call()
+#25 W:\\domains\\localhost\\vendor\\symfony\\console\\Command\\Command.php(299): Illuminate\\Console\\Command->execute()
+#26 W:\\domains\\localhost\\vendor\\illuminate\\console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#27 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(978): Illuminate\\Console\\Command->run()
+#28 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(295): Symfony\\Component\\Console\\Application->doRunCommand()
+#29 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#30 W:\\domains\\localhost\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#31 W:\\domains\\localhost\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run()
+#32 W:\\domains\\localhost\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle()
+#33 {main}
+"} 
+[2021-11-27 08:37:54] local.ERROR: Command "migrat" is ambiguous.
+Did you mean one of these?
+    migrate          Run the database migrations
+    migrate:fresh    Drop all tables and re-run all migrations
+    migrate:install  Create the migration repository
+    migrate:refresh  Reset and re-run all migrations
+    migrate:reset    Rollback all database migrations
+    migrate:rollback Rollback the last database migration
+    migrate:status   Show the status of each migration. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"migrat\" is ambiguous.
+Did you mean one of these?
+    migrate          Run the database migrations
+    migrate:fresh    Drop all tables and re-run all migrations
+    migrate:install  Create the migration repository
+    migrate:refresh  Reset and re-run all migrations
+    migrate:reset    Rollback all database migrations
+    migrate:rollback Rollback the last database migration
+    migrate:status   Show the status of each migration. at W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php:723)
+[stacktrace]
+#0 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(255): Symfony\\Component\\Console\\Application->find()
+#1 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#2 W:\\domains\\localhost\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#3 W:\\domains\\localhost\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run()
+#4 W:\\domains\\localhost\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle()
+#5 {main}
+"} 
+[2021-11-27 08:38:32] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations and table_type = 'BASE TABLE') at W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php:703)
+[stacktrace]
+#0 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback()
+#1 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(367): Illuminate\\Database\\Connection->run()
+#2 W:\\domains\\localhost\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(44): Illuminate\\Database\\Connection->select()
+#3 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable()
+#4 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\Migrator.php(652): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(106): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#8 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#9 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#10 W:\\domains\\localhost\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 W:\\domains\\localhost\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call()
+#14 W:\\domains\\localhost\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call()
+#15 W:\\domains\\localhost\\vendor\\symfony\\console\\Command\\Command.php(299): Illuminate\\Console\\Command->execute()
+#16 W:\\domains\\localhost\\vendor\\illuminate\\console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#17 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(978): Illuminate\\Console\\Command->run()
+#18 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(295): Symfony\\Component\\Console\\Application->doRunCommand()
+#19 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#20 W:\\domains\\localhost\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#21 W:\\domains\\localhost\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run()
+#22 W:\\domains\\localhost\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle()
+#23 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) at W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\Connector.php(70): PDO->__construct()
+#1 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection()
+#2 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection()
+#3 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect()
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(1021): call_user_func()
+#6 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(1057): Illuminate\\Database\\Connection->getPdo()
+#7 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(433): Illuminate\\Database\\Connection->getReadPdo()
+#8 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(359): Illuminate\\Database\\Connection->getPdoForSelect()
+#9 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#10 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback()
+#11 W:\\domains\\localhost\\vendor\\illuminate\\database\\Connection.php(367): Illuminate\\Database\\Connection->run()
+#12 W:\\domains\\localhost\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(44): Illuminate\\Database\\Connection->select()
+#13 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable()
+#14 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\Migrator.php(652): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(106): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 W:\\domains\\localhost\\vendor\\illuminate\\database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 W:\\domains\\localhost\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#19 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 W:\\domains\\localhost\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#22 W:\\domains\\localhost\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#23 W:\\domains\\localhost\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call()
+#24 W:\\domains\\localhost\\vendor\\illuminate\\console\\Command.php(136): Illuminate\\Container\\Container->call()
+#25 W:\\domains\\localhost\\vendor\\symfony\\console\\Command\\Command.php(299): Illuminate\\Console\\Command->execute()
+#26 W:\\domains\\localhost\\vendor\\illuminate\\console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#27 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(978): Illuminate\\Console\\Command->run()
+#28 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(295): Symfony\\Component\\Console\\Application->doRunCommand()
+#29 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#30 W:\\domains\\localhost\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#31 W:\\domains\\localhost\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run()
+#32 W:\\domains\\localhost\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle()
+#33 {main}
+"} 
+[2021-11-27 08:49:56] local.ERROR: Command "migrate:roalback" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"migrate:roalback\" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status at W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php:682)
+[stacktrace]
+#0 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(255): Symfony\\Component\\Console\\Application->find()
+#1 W:\\domains\\localhost\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#2 W:\\domains\\localhost\\vendor\\illuminate\\console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#3 W:\\domains\\localhost\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run()
+#4 W:\\domains\\localhost\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle()
+#5 {main}
+"} 
